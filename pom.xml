@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.fstn</groupId>
+  <artifactId>parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>eu</module>
+  	<module>fr</module>
+  	<module>Framework</module>
+  	<module>ps1</module>
+  	<module>ps2</module>
+  	<module>ps3</module>
+  	<module>ps4</module>
+  	<module>ps5</module>
+  	<module>ps6</module>
+  	<module>ps7</module>
+  	<module>ps8</module>
+  	<module>world</module>
+  </modules>
+</project>
