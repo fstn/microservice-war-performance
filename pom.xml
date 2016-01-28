@@ -5,17 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>eu</module>
-  	<module>fr</module>
   	<module>Framework</module>
   	<module>ps1</module>
-  	<module>ps2</module>
-  	<module>ps3</module>
-  	<module>ps4</module>
-  	<module>ps5</module>
-  	<module>ps6</module>
-  	<module>ps7</module>
-  	<module>ps8</module>
-  	<module>world</module>
   </modules>
 </project>
