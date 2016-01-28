@@ -6,6 +6,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>Framework</module>
-  	<module>ps1</module>
+  	<module>war</module>
   </modules>
 </project>
