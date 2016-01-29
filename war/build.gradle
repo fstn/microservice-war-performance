@@ -13,38 +13,25 @@ dependencies {
     providedCompile group: 'javax.ejb', name: 'javax.ejb-api', version:'3.2'
 }
 
+
 task api(type: War, dependsOn: classes) {
     baseName = 'api'
     archiveName "api.war"
-    logger.quiet("replacing #PARENT_NAME#");
-    filter{
-        String line -> line.replaceAll("#PARENT_NAME#","")
-    }
-    logger.quiet("replacing #CURRENT_NAME#");
-    filter{
-        String line -> line.replaceAll("#CURRENT_NAME#","api")
-    }
+    filter{String line -> line.replaceAll("#PARENT_NAME#","")}
+    filter{String line -> line.replaceAll("#CURRENT_NAME#","api")}
 }
 task world(type: War, dependsOn: classes) {
     baseName = 'world'
     archiveName "world.war"
-    logger.quiet("replacing #PARENT_NAME#");
-    filter{
-        String line -> line.replaceAll("#PARENT_NAME#","api")
-    }
-    logger.quiet("replacing #CURRENT_NAME#");
-    filter{
-        String line -> line.replaceAll("#CURRENT_NAME#","world")
-    }
+    filter{String line -> line.replaceAll("#PARENT_NAME#","api")}
+    filter{String line -> line.replaceAll("#CURRENT_NAME#","world")}
 }
 task eu(type: War, dependsOn: classes) {
     baseName = 'eu'
     archiveName "eu.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","world")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","eu")
     }
@@ -52,11 +39,9 @@ task eu(type: War, dependsOn: classes) {
 task fr(type: War, dependsOn: classes) {
     baseName = 'fr'
     archiveName "fr.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","eu")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","fr")
     }
@@ -64,11 +49,9 @@ task fr(type: War, dependsOn: classes) {
 task lr(type: War, dependsOn: classes) {
     baseName = 'lr'
     archiveName "lr.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","fr")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","lr")
     }
@@ -76,11 +59,9 @@ task lr(type: War, dependsOn: classes) {
 task ps1(type: War, dependsOn: classes) {
     baseName = 'ps1'
     archiveName "ps1.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","lr")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps1")
     }
@@ -88,11 +69,9 @@ task ps1(type: War, dependsOn: classes) {
 task ps2(type: War, dependsOn: classes) {
     baseName = 'ps2'
     archiveName "ps2.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps1")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps2")
     }
@@ -100,11 +79,9 @@ task ps2(type: War, dependsOn: classes) {
 task ps3(type: War, dependsOn: classes) {
     baseName = 'ps3'
     archiveName "ps3.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps2")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps3")
     }
@@ -112,11 +89,9 @@ task ps3(type: War, dependsOn: classes) {
 task ps4(type: War, dependsOn: classes) {
     baseName = 'ps4'
     archiveName "ps4.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps3")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps4")
     }
@@ -124,11 +99,9 @@ task ps4(type: War, dependsOn: classes) {
 task ps5(type: War, dependsOn: classes) {
     baseName = 'ps5'
     archiveName "ps5.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps4")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps5")
     }
@@ -136,11 +109,9 @@ task ps5(type: War, dependsOn: classes) {
 task ps6(type: War, dependsOn: classes) {
     baseName = 'ps6'
     archiveName "ps6.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps5")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps6")
     }
@@ -148,11 +119,9 @@ task ps6(type: War, dependsOn: classes) {
 task ps7(type: War, dependsOn: classes) {
     baseName = 'ps7'
     archiveName "ps7.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps6")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps7")
     }
@@ -160,11 +129,9 @@ task ps7(type: War, dependsOn: classes) {
 task ps8(type: War, dependsOn: classes) {
     baseName = 'ps8'
     archiveName "ps8.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps7")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps8")
     }
@@ -172,11 +139,9 @@ task ps8(type: War, dependsOn: classes) {
 task ps9(type: War, dependsOn: classes) {
     baseName = 'ps9'
     archiveName "ps9.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps8")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps9")
     }
@@ -184,11 +149,9 @@ task ps9(type: War, dependsOn: classes) {
 task ps10(type: War, dependsOn: classes) {
     baseName = 'ps10'
     archiveName "ps10.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps9")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps10")
     }
@@ -196,11 +159,9 @@ task ps10(type: War, dependsOn: classes) {
 task ps11(type: War, dependsOn: classes) {
     baseName = 'ps11'
     archiveName "ps11.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps10")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps11")
     }
@@ -208,11 +169,9 @@ task ps11(type: War, dependsOn: classes) {
 task ps12(type: War, dependsOn: classes) {
     baseName = 'ps12'
     archiveName "ps12.war"
-    logger.quiet("replacing #PARENT_NAME#");
     filter{
         String line -> line.replaceAll("#PARENT_NAME#","ps11")
     }
-    logger.quiet("replacing #CURRENT_NAME#");
     filter{
         String line -> line.replaceAll("#CURRENT_NAME#","ps12")
     }
