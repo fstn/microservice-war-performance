@@ -1,7 +1,7 @@
 # microservice-war-performance
 
 ## Deployment
-Deploy all war on wildly 8
+Deploy all war on wildly 8:
 
 ```javascript
 api.war
@@ -29,14 +29,13 @@ ps9.war
 
 
 ## Build
-to build:
+To build:
 ```javascript
 gradle.bat wars
 ```
 
 ## Run
-to call:
-
+To call:
 ```javascript
 POST: http://localhost:8080/api/rest/validateInvoice
 
